@@ -197,8 +197,6 @@ pub struct AnyNode {
     pub data: [u8; NODE_SIZE - 4],
 }
 
-const_assert_eq!(size_of::<AnyNode>(), size_of::<InnerNode>());
-const_assert_eq!(size_of::<AnyNode>(), size_of::<LeafNode>());
 const_assert_eq!(size_of::<AnyNode>(), size_of::<FreeNode>());
 
 enum NodeRef<'a> {
